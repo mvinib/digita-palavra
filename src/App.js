@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-
 class App extends Component{
   state={
     time: 60,
@@ -225,8 +224,7 @@ class App extends Component{
       {letra: 'Z', used: false}
       
     ]
-  }
- 
+  } 
 
   renderWord(word, key){//mostrando as palavras na tela
     if(word.discovered){
@@ -339,7 +337,7 @@ class App extends Component{
   render(){
     if(this.state.gameState=== 'stopped'){
       return(
-        <div >
+        <div className="container-button">
           <button className='button' onClick={()=>{
             var aleatorio = Math.floor(Math.random() * this.state.words.length);
             this.state.words[aleatorio].discovered = true;
@@ -359,7 +357,7 @@ class App extends Component{
     return (
       <div className="App">
         <header className="App-header">
-          <h1>JOGO DE VIADO QUE DA O CU PRA O PROFESSOR O DIA TODO NO IFAL DE MACEIÓ</h1>
+          <h1>DIGITE AS PALAVRAS ABAIXO:</h1>
           <p>Tempo restante: {this.state.time}</p> 
         </header>
         <div>
